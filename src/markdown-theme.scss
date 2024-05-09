@@ -409,41 +409,6 @@ $base-font:
     }
   }
 
-  h2 {
-    &::before {
-      counter-increment: h2counter;
-      content: counter(h2counter) '.\0000a0\0000a0';
-      margin-right: 10px;
-      color: $theme-color;
-      font-weight: bold;
-      font-size: $h2-font-size - 0.7em;
-    }
-  }
-
-  h3 {
-    &::before {
-      counter-increment: h3counter;
-      content: counter(h2counter) '.' counter(h3counter) '.\0000a0\0000a0';
-      margin-right: 10px;
-      color: $theme-color;
-      font-weight: bold;
-      font-size: $h3-font-size - 0.7em;
-    }
-  }
-
-  h4 {
-    &::before {
-      counter-increment: h4counter;
-      content: counter(h2counter) '.' counter(h3counter) '.'
-        counter(h4counter) '.\0000a0\0000a0';
-      margin-right: 10px;
-      color: $theme-color;
-      font-weight: bold;
-
-      font-size: $h4-font-size - 0.7em;
-    }
-  }
-
   &:not(.disabled-counter) {
     h2 {
       &::before {

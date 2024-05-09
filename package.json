@@ -1,15 +1,16 @@
 {
   "name": "@corgicoding/theme",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Corgi-Coding/vue-lib-template.git"
+    "url": "git+https://github.com/Corgi-Coding/markdown-theme.git.git"
   },
   "bugs": {
-    "url": "https://github.com/Corgi-Coding/vue-lib-template/issues"
+    "url": "https://github.com/Corgi-Coding/markdown-theme/issues"
   },
   "keywords": [
+    "theme",
     "corgicoding",
     "Corgi Coding",
     "Corgi-Coding",
@@ -18,20 +19,17 @@
   ],
   "author": "Charles Chan",
   "license": "Apache 2.0",
-  "main": "./lib/index.js",
-  "module": "./lib/index.js",
+  "main": "./lib/style.css",
+  "module": "./lib/style.css",
   "files": [
     "lib"
   ],
-  "types": "./lib/index.d.ts",
-  "typings": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "import": "./lib/style.css",
+      "require": "./lib/style.css"
     },
-    "./lib/style.css": "./lib/style.css",
-    "./types.d": "./lib/types.d.ts"
+    "./lib/style.css": "./lib/style.css"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",

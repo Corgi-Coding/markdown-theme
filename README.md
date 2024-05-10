@@ -46,7 +46,7 @@ import '@corgicoding/theme';
 
 1. DownLoad this Repository.
 2. Unzip
-3. Add the `c-html-render` class to the dom element to be rendered.
+3. Add the `cc__markdown-theme` class to the dom element to be rendered.
 4. Add the following code to the page.
 
 ```html
@@ -65,11 +65,36 @@ import '@corgicoding/theme';
 
 ## Option Classes
 
-header title no counter
+- header title no counter
 
 ```html
 <div class="cc__markdown-theme disabled-counter">
   <h1>hello</h1>
   <div></div>
+</div>
+```
+
+- dark mode
+
+```html
+<html class="dark">
+  <div class="cc__markdown-theme disabled-counter">
+    <h1>hello</h1>
+    <div></div>
+  </div>
+  <html></html>
+</html>
+```
+
+## markdown-it support
+
+- markdown-it with vue3: https://www.npmjs.com/package/@corgicoding/markdown-render
+- markdown editor and preview: https://www.npmjs.com/package/@corgicoding/markdown-vue
+
+```vue
+import '@corgicoding/theme';
+
+<div class="cc__markdown-theme">
+  <MarkdownRender v-model="textValue" style="padding: 20px"></MarkdownRender>
 </div>
 ```

@@ -1,16 +1,17 @@
 {
   "name": "@corgicoding/theme",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Corgi-Coding/markdown-theme.git.git"
+    "url": "git+https://github.com/Corgi-Coding/markdown-theme.git"
   },
   "bugs": {
     "url": "https://github.com/Corgi-Coding/markdown-theme/issues"
   },
   "keywords": [
     "theme",
+    "markdown-it",
     "corgicoding",
     "Corgi Coding",
     "Corgi-Coding",
@@ -20,7 +21,7 @@
   "author": "Charles Chan",
   "license": "Apache 2.0",
   "main": "./lib/style.css",
-  "module": "./lib/style.css",
+  "module": "./lib/index.js",
   "files": [
     "lib"
   ],

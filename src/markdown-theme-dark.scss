@@ -1,23 +1,25 @@
 @charset "UTF-8";
-$background-color: #fff;
+$background-color: #333;
 $theme-color: #178ffe;
+$text-color: #fcfcfc;
 $text-hover-color: #e99b50;
-$title-color: #333;
+$title-color: #fcfcfc;
 $pre-color: #f8f8f8;
 $pre-border-color: #ddd;
-$code-color: #690000;
+$code-color: #ff6868;
+$code-bg-color: rgba(179, 207, 235, 0.05);
 $hr-border-color: #cfcfcf;
 $small-text-color: #888;
-$strong-text-color: #333;
+$strong-text-color: #fcfcfc;
 $quote-border-color: #b3b3b3;
 $quote-color: #999;
 $mark-bg-color: #fffdd1;
 $mark-border-color: #ffedce;
-$th-bg-color: #fbfbfb;
-$td-bg-color: #f1f1f1;
-$table-text-color: #666;
+$th-bg-color: #252525;
+$td-bg-color: #292929;
+$table-text-color: #cecece;
 $table-border-color: #ddd;
-$em-color: #333; 
+$em-color: #fcfcfc; 
 
 $h1-before-content: '#';
 
@@ -56,9 +58,9 @@ $base-font:
 - serif
 */
 
-.cc__markdown-theme {
+html.dark .cc__markdown-theme {
   /* html init settings */
-  color: #333;
+  color: $text-color;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
@@ -69,95 +71,6 @@ $base-font:
   font: $base-font;
   line-height: 1.55em;
 
-  /* adaptation */
-  body,
-  dl,
-  dt,
-  dd,
-  ul,
-  ol,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  pre,
-  code,
-  form,
-  fieldset,
-  legend,
-  input,
-  textarea,
-  p,
-  blockquote,
-  th,
-  td,
-  hr,
-  button,
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  menu,
-  nav,
-  section {
-    margin: 0;
-    padding: 0;
-  }
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  menu,
-  nav,
-  section {
-    display: block;
-  }
-  audio,
-  canvas,
-  video {
-    display: inline-block;
-  }
-
-  body,
-  button,
-  input,
-  select,
-  textarea {
-    font:
-      300 1em/1.8 PingFang SC,
-      Lantinghei SC,
-      Microsoft Yahei,
-      Hiragino Sans GB,
-      Microsoft Sans Serif,
-      WenQuanYi Micro Hei,
-      sans-serif;
-  }
-
-  button::-moz-focus-inner,
-  input::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  fieldset,
-  img {
-    border: 0;
-  }
-
   blockquote {
     position: relative;
     color: $quote-color;
@@ -165,78 +78,6 @@ $base-font:
     border-left: 4px solid $quote-border-color;
     padding-left: 1em;
     margin: 1em 3em 1em 2em;
-  }
-
-  @media only screen and (max-width: 640px) {
-    blockquote {
-      margin: 1em 0;
-    }
-  }
-
-  acronym,
-  abbr {
-    border-bottom: 1px dotted;
-    font-variant: normal;
-    text-decoration: none;
-  }
-
-  abbr {
-    cursor: help;
-  }
-
-  del {
-    text-decoration: line-through;
-  }
-
-  address,
-  caption,
-  cite,
-  code,
-  dfn,
-  th,
-  var {
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  ul,
-  ol {
-    list-style: none;
-  }
-
-  caption,
-  th {
-    text-align: left;
-  }
-
-  q:before,
-  q:after {
-    content: '';
-  }
-
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-  }
-
-  :root sub,
-  :root sup {
-    vertical-align: baseline; /* for ie9 and other modern browsers */
-  }
-
-  sup {
-    top: -0.5em;
-  }
-
-  sub {
-    bottom: -0.25em;
-  }
-
-  ins,
-  a {
-    text-decoration: none;
   }
 
   a {
@@ -248,11 +89,6 @@ $base-font:
       border-bottom-color: $text-hover-color;
       color: $text-hover-color;
     }
-  }
-
-  u,
-  .c-u {
-    text-decoration: underline;
   }
 
   mark {
@@ -280,7 +116,7 @@ $base-font:
     color: $code-color;
     padding: 0.25rem 0.5rem;
     margin: 0;
-    background-color: rgba(27, 31, 35, 0.05);
+    background-color: $code-bg-color;
     border-radius: 3px;
   }
 
@@ -288,7 +124,7 @@ $base-font:
     color: $code-color;
     padding: 0.25rem 0.5rem;
     margin: 0;
-    background-color: rgba(27, 31, 35, 0.05);
+    background-color: $code-bg-color;
     border-radius: 3px;
   }
 
@@ -312,51 +148,6 @@ $base-font:
     color: $strong-text-color;
   }
 
-  [draggable] {
-    cursor: move;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    content: '';
-    display: table;
-  }
-
-  .clearfix:after {
-    clear: both;
-  }
-
-  .clearfix {
-    zoom: 1;
-  }
-
-  .textwrap,
-  .textwrap td,
-  .textwrap th {
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-
-  .textwrap-table {
-    table-layout: fixed;
-  }
-
-  .serif {
-    font-family: $serif-family;
-  }
-
-  p,
-  pre,
-  ul,
-  ol,
-  dl,
-  form,
-  hr,
-  table,
-  blockquote {
-    margin-bottom: 1.2em;
-  }
-
   h1,
   h2,
   h3,
@@ -369,31 +160,6 @@ $base-font:
     line-height: 1.35;
     margin-top: 1.2em;
     margin-bottom: 0.6em !important;
-  }
-
-  h1 {
-    counter-reset: h2counter;
-    font-size: $h1-font-size;
-  }
-
-  h2 {
-    counter-reset: h3counter;
-    font-size: $h2-font-size;
-  }
-
-  h3 {
-    counter-reset: h4counter;
-    font-size: $h3-font-size;
-  }
-
-  h4 {
-    counter-reset: h5counter;
-    font-size: $h4-font-size;
-  }
-
-  h5,
-  h6 {
-    font-size: $h5-font-size;
   }
 
   h1 {
@@ -447,36 +213,6 @@ $base-font:
     }
   }
 
-  ul {
-    margin-left: 1.3em;
-    list-style: disc;
-  }
-
-  ol {
-    list-style: decimal;
-    margin-left: 1.9em;
-  }
-
-  li ul,
-  li ol {
-    margin-bottom: 0.8em;
-    margin-left: 2em;
-  }
-
-  li ul {
-    list-style: circle;
-  }
-
-  table caption {
-    border-bottom: none;
-  }
-
-  .c-input,
-  .c-textarea {
-    appearance: none;
-    border-radius: 0;
-  }
-
   table th,
   table td,
   table caption {
@@ -498,22 +234,5 @@ $base-font:
   caption {
     color: $em-color;
     font-weight: inherit;
-  }
-  .c-em {
-    position: relative;
-  }
-
-  .c-em:after {
-    position: absolute;
-    top: 0.65em;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    content: '・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・';
-  }
-
-  img {
-    max-width: 100%;
   }
 }

@@ -1,9 +1,100 @@
-# Vue 3 + TypeScript + Vite
+# corgicoding-theme-css
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Render css based on the markdown format modified by typo.css.
 
-## Recommended Setup
+---
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+- Author: Charles Chan
+- Organization: Corgi Coding
+- Github: https://github.com/Corgi-Coding
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+_version 1.0.4: fix `li pre` style_  
+_version 1.0.4: fix `li pre` style_  
+_version 1.0.5: add feat global style_
+_version 1.0.6: remove global style | fix some error_
+
+\*version 2.0.0: vite build
+
+## How to use
+
+There are two ways to use it
+
+### NPM
+
+1. Install package
+
+```
+    npm install @corgicoding/theme
+```
+
+2. Import css file to the page.
+
+```js
+import '@corgicoding/theme';
+```
+
+3. Add the `cc__markdown-theme` class to the dom element to be rendered.
+
+```html
+<div class="cc__markdown-theme">
+  <h1>hello</h1>
+  <div></div>
+</div>
+```
+
+### HTML
+
+1. DownLoad this Repository.
+2. Unzip
+3. Add the `cc__markdown-theme` class to the dom element to be rendered.
+4. Add the following code to the page.
+
+```html
+<!--   Prevent compatibility issues caused by different browsers   -->
+<link rel="stylesheet" href="./dist/normalize.css" />
+<!--   corgicoding.theme   -->
+<link rel="stylesheet" href="./dist/corgicoding.theme.min.css" />
+<!--   github style code render   -->
+<link rel="stylesheet" href="./dist/github.css" />
+
+<div class="cc__markdown-theme">
+  <h1>hello</h1>
+  <div></div>
+</div>
+```
+
+## Option Classes
+
+- header title no counter
+
+```html
+<div class="cc__markdown-theme disabled-counter">
+  <h1>hello</h1>
+  <div></div>
+</div>
+```
+
+- dark mode
+
+```html
+<html class="dark">
+  <div class="cc__markdown-theme disabled-counter">
+    <h1>hello</h1>
+    <div></div>
+  </div>
+  <html></html>
+</html>
+```
+
+## markdown-it support
+
+- markdown-it with vue3: https://www.npmjs.com/package/@corgicoding/markdown-render
+- markdown editor and preview: https://www.npmjs.com/package/@corgicoding/markdown-vue
+
+```vue
+import '@corgicoding/theme';
+
+<div class="cc__markdown-theme">
+  <MarkdownRender v-model="textValue" style="padding: 20px"></MarkdownRender>
+</div>
+```
